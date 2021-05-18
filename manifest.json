@@ -3,14 +3,19 @@
   "short_name": "UCP",
   "icon": [
       {
-        "src": "/meta/Icon.png",
+        "src": "meta/Icon.png",
         "type": "image/png",
         "sizes": "512x512"
+      },
+      {
+        "src": "meta/android/android-launchericon-144-144.png",
+        "sizes": "144x144",
+        "type": "image/png"
       }
   ],
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
-  "display": "browser",
+  "display": "standalone",
   "scope": "/",
   "start_url": "/index.html"
-  }
+}

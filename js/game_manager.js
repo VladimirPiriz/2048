@@ -12,7 +12,7 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
 
   url = "wss://ucp-games-2021.azurewebsites.net/ws";
   this.socket = new WebSocket(url);
-  this.socket.onopen = function(e){this.socket.send("hola");}
+  // this.socket.onopen = function(e){this.socket.send("hola");}
 
   this.setup();
 }

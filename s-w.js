@@ -1,5 +1,14 @@
 const CACHE_NAME = 'offline';
 const OFFLINE_URL = 'offline.html';
+var urlsToCache = [
+    'js',
+    'meta',
+    'style',
+    'favicon.ico',
+    'index.html',
+    'manifest.json',
+    'script.js'
+];
 
 // self.addEventListener('install', function(event) {
 //     console.log('[ServiceWorker] Install');

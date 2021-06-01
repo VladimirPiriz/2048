@@ -20,7 +20,6 @@ self.addEventListener('install', function(event) {
       caches.open(CACHE_NAME)
         .then(function(cache) {
           console.log('Opened cache');
-          await cache.add(new Request(OFFLINE_URL, {cache: 'reload'}));
           return cache.addAll(urlsToCache);
         })
     );

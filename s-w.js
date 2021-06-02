@@ -1,12 +1,32 @@
 var cacheName = 'offline';
 var version = '1';
 var contentToCache = [
-    '/js/animframe_polyfill.js',
+    'js/animframe_polyfill.js',
     'js/application.js',
     'js/bind_polyfill.js',
-    '/script.js',
-    '/manifest.json',
-    '/index.html'
+    'js/classlist_polyfill.js',
+    'js/game_manager.js',
+    'js/grid.js',
+    'js/html_actuator.js',
+    'js/keyboard_input_manager.js',
+    'js/local_storage_manager.js',
+    'js/tile.js',
+    'meta/apple-touch-icon.png',
+    'meta/apple-touch-startup-image-640x920.png',
+    'meta/apple-touch-startup-image-640x1096.png',
+    'style/fonts/clear-sans.css',
+    'style/fonts/ClearSans-Bold-webfont.eot',
+    'style/fonts/ClearSans-Bold-webfont.svg',
+    'style/fonts/ClearSans-Bold-webfont.woff',
+    'style/fonts/ClearSans-Light-webfont.eot',
+    'style/fonts/ClearSans-Light-webfont.svg',
+    'style/fonts/ClearSans-Light-webfont.woff',
+    'style/fonts/ClearSans-Regular-webfont.eot',
+    'style/fonts/ClearSans-Regular-webfont.svg',
+    'style/fonts/ClearSans-Regular-webfont.woff',
+    'style/main.css',
+    'script.js',
+    'index.html'
 ];
 
 self.addEventListener('install', (e) => {

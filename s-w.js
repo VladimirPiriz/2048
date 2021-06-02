@@ -10,6 +10,12 @@ var urlsToCache = [
     '/CONTRIBUTING.md'
 ];
 
+var gamesImages = [];
+for(var i=0; i<games.length; i++) {
+  gamesImages.push('data/img/'+games[i].slug+'.jpg');
+}
+var contentToCache = appShellFiles.concat(gamesImages);
+
 // self.addEventListener('install', function(event) {
 //     console.log('[ServiceWorker] Install');
   
@@ -23,14 +29,13 @@ var urlsToCache = [
 //     self.skipWaiting();
 // });
 
-self.addEventListener('install', function(event) {
-    // Perform install steps
-    event.waitUntil(
-      caches.open(CACHE_NAME)
-        .then(function(cache) {
-          console.log('Opened cache');
-          return cache.addAll(urlsToCache);
-        })
+self.addEventListener('install', (e) => {
+    console.log('[Service Worker] Install');
+    e.waitUntil(
+      caches.open(cacheName).then((cache) => {
+            console.log('[Servicio Worker] Almacena todo en caché: contenido e intérprete de la aplicación');
+        return cache.addAll(contentToCache);
+      })
     );
 });
 

@@ -1,13 +1,11 @@
 var CACHE_NAME = 'offline';
 var contentToCache = [
+    '/js/animframe_polyfill.js',
+    'js/application.js',
+    'js/bind_polyfill.js',
     '/script.js',
-    '/README.md',
-    '/Rakefile',
     '/manifest.json',
-    '/LICENSE.txt',
-    '/index.html',
-    '/favicon.ico',
-    '/CONTRIBUTING.md'
+    '/index.html'
 ];
 
 var gamesImages = [];

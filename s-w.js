@@ -1,5 +1,5 @@
 var CACHE_NAME = 'offline';
-var urlsToCache = [
+var contentToCache = [
     '/script.js',
     '/README.md',
     '/Rakefile',

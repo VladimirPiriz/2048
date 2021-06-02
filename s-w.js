@@ -1,13 +1,13 @@
-const CACHE_NAME = 'offline';
-const OFFLINE_URL = 'offline.html';
+var CACHE_NAME = 'offline';
 var urlsToCache = [
-    'js',
-    'meta',
-    'style',
-    'favicon.ico',
-    'index.html',
-    'manifest.json',
-    'script.js'
+    '/script.js',
+    '/README.md',
+    '/Rakefile',
+    '/manifest.json',
+    '/LICENSE.txt',
+    '/index.html',
+    '/favicon.ico',
+    '/CONTRIBUTING.md'
 ];
 
 // self.addEventListener('install', function(event) {

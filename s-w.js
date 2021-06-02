@@ -1,4 +1,5 @@
 var cacheName = 'offline';
+
 var contentToCache = [
     '/js/animframe_polyfill.js',
     'js/application.js',

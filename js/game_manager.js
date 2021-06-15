@@ -12,14 +12,15 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
 
   url = "wss://ucp-games-2021.azurewebsites.net/multiplayer";
   this.multiplayer = new WebSocket(url);
-  // this.socket.onopen = function(e){this.socket.send("hola");}
-
+  this.playerID = "Vlad";
+  this.multiplayer.onopen = function(e){console.log("conexion exitosa al multiplayer");}
+  this.multiplayer.onmessage = function(event){
+    console.log(event.data);
+  };
   this.setup();
 }
 
-window.multiplayer.onmessage = function(event){
-  console.log(event.data);
-};
+
 
 // Restart the game
 GameManager.prototype.restart = function () {
@@ -107,18 +108,17 @@ GameManager.prototype.actuate = function () {
   // -----------> H E R E <----------- //
 
 
-  if (this.socket.readyState == 1){
+  if (this.multiplayer.readyState == 1){
     var event = {
       "game":"Demo UCP",
-      "player":"Vladi",
-      "value": this.score.toString()
-    }
+      "player": this.playerID,
+      "value": this.score
     };
     console.log("Enviando"); 
-    this.socket.send(JSON.stringify(event));
+    this.multiplayer.send(JSON.stringify(event));
   }
 
-  console.log(this.socket.readyState); 
+  console.log(this.multiplayer.readyState); 
 
   // -----------> H E R E <----------- //
 

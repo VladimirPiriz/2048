@@ -12,8 +12,9 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
 
   url = "wss://ucp-games-2021.azurewebsites.net/multiplayer";
   this.multiplayer = new WebSocket(url);
-  this.playerID = "Vlad";
-  this.multiplayer.onopen = function(e){
+  this.playerID = "player-" + parseInt((Math.random() * (1000 - 1) + 1));
+
+  this.multiplayer.onopen = function(event){
     console.log("conexion exitosa al multiplayer");
   };
 

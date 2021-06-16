@@ -123,15 +123,12 @@ GameManager.prototype.actuate = function () {
 
   if (this.multiplayer.readyState == 1){
     var event = {
-      "game":"Demo UCP",
+      "game":"2048",
       "player": this.playerID,
       "value": this.score
     };
-    console.log("Enviando"); 
     this.multiplayer.send(JSON.stringify(event));
   }
-
-  console.log(this.multiplayer.readyState); 
 
   // -----------> H E R E <----------- //
 

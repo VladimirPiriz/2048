@@ -14,7 +14,7 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
   this.multiplayer = new WebSocket(url);
 
   this.playerID = localStorage.getItem('playerID');
-  if (typeof window.playerID === 'undefined' || window.playerID == null)
+  if (typeof this.playerID === 'undefined' || window.playerID == null)
     {
       var playerIDValue = "player-" + parseInt((Math.random() * (1000 - 1) + 1));
       localStorage.setItem('playerID', playerIDValue);

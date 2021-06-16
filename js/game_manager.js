@@ -28,7 +28,7 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
 
   this.multiplayer.onmessage = function(event){
     var datos = JSON.parse(event.data);
-    console.log(datos.player);
+    console.log(datos.players);
   };
   this.setup();
 }

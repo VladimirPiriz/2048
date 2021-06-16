@@ -16,8 +16,10 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
   this.multiplayer.onopen = function(e){
     console.log("conexion exitosa al multiplayer");
   };
+
   this.multiplayer.onmessage = function(event){
-    console.log(event.data);
+    var datos = JSON.parse(event.data);
+    console.log(datos.player);
   };
   this.setup();
 }
